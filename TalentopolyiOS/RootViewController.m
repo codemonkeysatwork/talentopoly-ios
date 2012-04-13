@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "TOPost.h"
+#import "TOPostDetailViewController.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -125,13 +126,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+    TOPostDetailViewController *pc = [[TOPostDetailViewController alloc] initWithNibName:@"TOPostDetailViewController" bundle:nil];
+    pc.post = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+    [self.navigationController pushViewController:pc animated:YES];
+    [pc release];
 }
 
 - (void)didReceiveMemoryWarning

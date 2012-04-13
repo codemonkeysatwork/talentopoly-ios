@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB611EB91537CF88005D9B6E /* _TOPost.m in Sources */ = {isa = PBXBuildFile; fileRef = DB611EB61537CF88005D9B6E /* _TOPost.m */; };
 		DB611EBA1537CF88005D9B6E /* TOPost.m in Sources */ = {isa = PBXBuildFile; fileRef = DB611EB81537CF88005D9B6E /* TOPost.m */; };
+		DB611EC41537D38F005D9B6E /* TOPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB611EC21537D38F005D9B6E /* TOPostDetailViewController.m */; };
+		DB611EC51537D38F005D9B6E /* TOPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */; };
 		DBD464CA1537C40B006C5DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464C91537C40B006C5DD3 /* UIKit.framework */; };
 		DBD464CC1537C40B006C5DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CB1537C40B006C5DD3 /* Foundation.framework */; };
 		DBD464CE1537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */; };
@@ -44,6 +46,9 @@
 		DB611EB61537CF88005D9B6E /* _TOPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _TOPost.m; sourceTree = "<group>"; };
 		DB611EB71537CF88005D9B6E /* TOPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOPost.h; sourceTree = "<group>"; };
 		DB611EB81537CF88005D9B6E /* TOPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOPost.m; sourceTree = "<group>"; };
+		DB611EC11537D38F005D9B6E /* TOPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOPostDetailViewController.h; sourceTree = "<group>"; };
+		DB611EC21537D38F005D9B6E /* TOPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOPostDetailViewController.m; sourceTree = "<group>"; };
+		DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOPostDetailViewController.xib; sourceTree = "<group>"; };
 		DBD464C51537C40B006C5DD3 /* TalentopolyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentopolyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD464C91537C40B006C5DD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBD464CB1537C40B006C5DD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +102,7 @@
 		DB611EB41537CF88005D9B6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBD464DD1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld */,
 				DB611EB51537CF88005D9B6E /* _TOPost.h */,
 				DB611EB61537CF88005D9B6E /* _TOPost.m */,
 				DB611EB71537CF88005D9B6E /* TOPost.h */,
@@ -145,7 +151,9 @@
 				DBD464E31537C40B006C5DD3 /* RootViewController.h */,
 				DBD464E41537C40B006C5DD3 /* RootViewController.m */,
 				DBD464E61537C40B006C5DD3 /* RootViewController.xib */,
-				DBD464DD1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld */,
+				DB611EC11537D38F005D9B6E /* TOPostDetailViewController.h */,
+				DB611EC21537D38F005D9B6E /* TOPostDetailViewController.m */,
+				DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */,
 				DBD464D21537C40B006C5DD3 /* Supporting Files */,
 			);
 			path = TalentopolyiOS;
@@ -255,6 +263,7 @@
 				DBD464D61537C40B006C5DD3 /* InfoPlist.strings in Resources */,
 				DBD464E21537C40B006C5DD3 /* MainWindow.xib in Resources */,
 				DBD464E81537C40B006C5DD3 /* RootViewController.xib in Resources */,
+				DB611EC51537D38F005D9B6E /* TOPostDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +305,7 @@
 				DBD464E51537C40B006C5DD3 /* RootViewController.m in Sources */,
 				DB611EB91537CF88005D9B6E /* _TOPost.m in Sources */,
 				DB611EBA1537CF88005D9B6E /* TOPost.m in Sources */,
+				DB611EC41537D38F005D9B6E /* TOPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +506,8 @@
 				DBD464DE1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodel */,
 			);
 			currentVersion = DBD464DE1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodel */;
-			path = TalentopolyiOS.xcdatamodeld;
+			name = TalentopolyiOS.xcdatamodeld;
+			path = ../TalentopolyiOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
