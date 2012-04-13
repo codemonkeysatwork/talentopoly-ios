@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "TOPost.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -158,8 +159,8 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
+    TOPost *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = managedObject.title;
 }
 
 - (void)insertNewObject
@@ -167,14 +168,12 @@
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
+    TOPost *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"posted_at"];
-    [newManagedObject setValue:@"Title" forKey:@"title"];
-    [newManagedObject setValue:@"http://www.example.com/" forKey:@"link"];
-    [newManagedObject setValue:[NSNumber numberWithInt:123] forKey:@"post_id"];
+    newManagedObject.posted_at = [NSDate date];
+    newManagedObject.title = [NSString stringWithFormat:@"Title posted at %@", [newManagedObject.posted_at description]];
+    newManagedObject.link = @"http://www.talentopoly.com/";
+    newManagedObject.post_idValue = 123;
 
     // Save the context.
     NSError *error = nil;
