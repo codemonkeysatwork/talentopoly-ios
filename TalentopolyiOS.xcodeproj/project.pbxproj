@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBD464CA1537C40B006C5DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464C91537C40B006C5DD3 /* UIKit.framework */; };
+		DBD464CC1537C40B006C5DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CB1537C40B006C5DD3 /* Foundation.framework */; };
+		DBD464CE1537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */; };
+		DBD464D01537C40B006C5DD3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CF1537C40B006C5DD3 /* CoreData.framework */; };
+		DBD464D61537C40B006C5DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD464D41537C40B006C5DD3 /* InfoPlist.strings */; };
+		DBD464D91537C40B006C5DD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464D81537C40B006C5DD3 /* main.m */; };
+		DBD464DC1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464DB1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m */; };
+		DBD464DF1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBD464DD1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld */; };
+		DBD464E21537C40B006C5DD3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD464E01537C40B006C5DD3 /* MainWindow.xib */; };
+		DBD464E51537C40B006C5DD3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464E41537C40B006C5DD3 /* RootViewController.m */; };
+		DBD464E81537C40B006C5DD3 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD464E61537C40B006C5DD3 /* RootViewController.xib */; };
+		DBD464EF1537C40B006C5DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464C91537C40B006C5DD3 /* UIKit.framework */; };
+		DBD464F01537C40B006C5DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CB1537C40B006C5DD3 /* Foundation.framework */; };
+		DBD464F11537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */; };
+		DBD464F21537C40B006C5DD3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CF1537C40B006C5DD3 /* CoreData.framework */; };
+		DBD464FA1537C40B006C5DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD464F81537C40B006C5DD3 /* InfoPlist.strings */; };
+		DBD464FD1537C40B006C5DD3 /* TalentopolyiOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */; };
+		DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBD464F31537C40B006C5DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBD464BC1537C40A006C5DD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBD464C41537C40A006C5DD3;
+			remoteInfo = TalentopolyiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DBD464C51537C40B006C5DD3 /* TalentopolyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentopolyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD464C91537C40B006C5DD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBD464CB1537C40B006C5DD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBD464CF1537C40B006C5DD3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DBD464D31537C40B006C5DD3 /* TalentopolyiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TalentopolyiOS-Info.plist"; sourceTree = "<group>"; };
+		DBD464D51537C40B006C5DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBD464D71537C40B006C5DD3 /* TalentopolyiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalentopolyiOS-Prefix.pch"; sourceTree = "<group>"; };
+		DBD464D81537C40B006C5DD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBD464DA1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalentopolyiOSAppDelegate.h; sourceTree = "<group>"; };
+		DBD464DB1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalentopolyiOSAppDelegate.m; sourceTree = "<group>"; };
+		DBD464DE1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TalentopolyiOS.xcdatamodel; sourceTree = "<group>"; };
+		DBD464E11537C40B006C5DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		DBD464E31537C40B006C5DD3 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		DBD464E41537C40B006C5DD3 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		DBD464E71537C40B006C5DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		DBD464EE1537C40B006C5DD3 /* TalentopolyiOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalentopolyiOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD464F71537C40B006C5DD3 /* TalentopolyiOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TalentopolyiOSTests-Info.plist"; sourceTree = "<group>"; };
+		DBD464F91537C40B006C5DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DBD464FB1537C40B006C5DD3 /* TalentopolyiOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalentopolyiOSTests-Prefix.pch"; sourceTree = "<group>"; };
+		DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalentopolyiOSTests.h; sourceTree = "<group>"; };
+		DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalentopolyiOSTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBD464C21537C40A006C5DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464CA1537C40B006C5DD3 /* UIKit.framework in Frameworks */,
+				DBD464CC1537C40B006C5DD3 /* Foundation.framework in Frameworks */,
+				DBD464CE1537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */,
+				DBD464D01537C40B006C5DD3 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD464EA1537C40B006C5DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464EF1537C40B006C5DD3 /* UIKit.framework in Frameworks */,
+				DBD464F01537C40B006C5DD3 /* Foundation.framework in Frameworks */,
+				DBD464F11537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */,
+				DBD464F21537C40B006C5DD3 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBD464BA1537C40A006C5DD3 = {
+			isa = PBXGroup;
+			children = (
+				DBD464D11537C40B006C5DD3 /* TalentopolyiOS */,
+				DBD464F51537C40B006C5DD3 /* TalentopolyiOSTests */,
+				DBD464C81537C40B006C5DD3 /* Frameworks */,
+				DBD464C61537C40B006C5DD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBD464C61537C40B006C5DD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464C51537C40B006C5DD3 /* TalentopolyiOS.app */,
+				DBD464EE1537C40B006C5DD3 /* TalentopolyiOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBD464C81537C40B006C5DD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464C91537C40B006C5DD3 /* UIKit.framework */,
+				DBD464CB1537C40B006C5DD3 /* Foundation.framework */,
+				DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */,
+				DBD464CF1537C40B006C5DD3 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBD464D11537C40B006C5DD3 /* TalentopolyiOS */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464DA1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.h */,
+				DBD464DB1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m */,
+				DBD464E01537C40B006C5DD3 /* MainWindow.xib */,
+				DBD464E31537C40B006C5DD3 /* RootViewController.h */,
+				DBD464E41537C40B006C5DD3 /* RootViewController.m */,
+				DBD464E61537C40B006C5DD3 /* RootViewController.xib */,
+				DBD464DD1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld */,
+				DBD464D21537C40B006C5DD3 /* Supporting Files */,
+			);
+			path = TalentopolyiOS;
+			sourceTree = "<group>";
+		};
+		DBD464D21537C40B006C5DD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464D31537C40B006C5DD3 /* TalentopolyiOS-Info.plist */,
+				DBD464D41537C40B006C5DD3 /* InfoPlist.strings */,
+				DBD464D71537C40B006C5DD3 /* TalentopolyiOS-Prefix.pch */,
+				DBD464D81537C40B006C5DD3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBD464F51537C40B006C5DD3 /* TalentopolyiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */,
+				DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */,
+				DBD464F61537C40B006C5DD3 /* Supporting Files */,
+			);
+			path = TalentopolyiOSTests;
+			sourceTree = "<group>";
+		};
+		DBD464F61537C40B006C5DD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBD464F71537C40B006C5DD3 /* TalentopolyiOSTests-Info.plist */,
+				DBD464F81537C40B006C5DD3 /* InfoPlist.strings */,
+				DBD464FB1537C40B006C5DD3 /* TalentopolyiOSTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBD464C41537C40A006C5DD3 /* TalentopolyiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBD465021537C40C006C5DD3 /* Build configuration list for PBXNativeTarget "TalentopolyiOS" */;
+			buildPhases = (
+				DBD464C11537C40A006C5DD3 /* Sources */,
+				DBD464C21537C40A006C5DD3 /* Frameworks */,
+				DBD464C31537C40A006C5DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalentopolyiOS;
+			productName = TalentopolyiOS;
+			productReference = DBD464C51537C40B006C5DD3 /* TalentopolyiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBD464ED1537C40B006C5DD3 /* TalentopolyiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBD465051537C40C006C5DD3 /* Build configuration list for PBXNativeTarget "TalentopolyiOSTests" */;
+			buildPhases = (
+				DBD464E91537C40B006C5DD3 /* Sources */,
+				DBD464EA1537C40B006C5DD3 /* Frameworks */,
+				DBD464EB1537C40B006C5DD3 /* Resources */,
+				DBD464EC1537C40B006C5DD3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBD464F41537C40B006C5DD3 /* PBXTargetDependency */,
+			);
+			name = TalentopolyiOSTests;
+			productName = TalentopolyiOSTests;
+			productReference = DBD464EE1537C40B006C5DD3 /* TalentopolyiOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBD464BC1537C40A006C5DD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = OutOfOrder.cc;
+			};
+			buildConfigurationList = DBD464BF1537C40A006C5DD3 /* Build configuration list for PBXProject "TalentopolyiOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DBD464BA1537C40A006C5DD3;
+			productRefGroup = DBD464C61537C40B006C5DD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBD464C41537C40A006C5DD3 /* TalentopolyiOS */,
+				DBD464ED1537C40B006C5DD3 /* TalentopolyiOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBD464C31537C40A006C5DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464D61537C40B006C5DD3 /* InfoPlist.strings in Resources */,
+				DBD464E21537C40B006C5DD3 /* MainWindow.xib in Resources */,
+				DBD464E81537C40B006C5DD3 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD464EB1537C40B006C5DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464FA1537C40B006C5DD3 /* InfoPlist.strings in Resources */,
+				DBD464FD1537C40B006C5DD3 /* TalentopolyiOSTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DBD464EC1537C40B006C5DD3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBD464C11537C40A006C5DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464D91537C40B006C5DD3 /* main.m in Sources */,
+				DBD464DC1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m in Sources */,
+				DBD464DF1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld in Sources */,
+				DBD464E51537C40B006C5DD3 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD464E91537C40B006C5DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBD464F41537C40B006C5DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBD464C41537C40A006C5DD3 /* TalentopolyiOS */;
+			targetProxy = DBD464F31537C40B006C5DD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBD464D41537C40B006C5DD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBD464D51537C40B006C5DD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DBD464E01537C40B006C5DD3 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBD464E11537C40B006C5DD3 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		DBD464E61537C40B006C5DD3 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBD464E71537C40B006C5DD3 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		DBD464F81537C40B006C5DD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBD464F91537C40B006C5DD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBD465001537C40C006C5DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBD465011537C40C006C5DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		DBD465031537C40C006C5DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TalentopolyiOS/TalentopolyiOS-Prefix.pch";
+				INFOPLIST_FILE = "TalentopolyiOS/TalentopolyiOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DBD465041537C40C006C5DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TalentopolyiOS/TalentopolyiOS-Prefix.pch";
+				INFOPLIST_FILE = "TalentopolyiOS/TalentopolyiOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DBD465061537C40C006C5DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TalentopolyiOS.app/TalentopolyiOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TalentopolyiOSTests/TalentopolyiOSTests-Prefix.pch";
+				INFOPLIST_FILE = "TalentopolyiOSTests/TalentopolyiOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DBD465071537C40C006C5DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TalentopolyiOS.app/TalentopolyiOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TalentopolyiOSTests/TalentopolyiOSTests-Prefix.pch";
+				INFOPLIST_FILE = "TalentopolyiOSTests/TalentopolyiOSTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBD464BF1537C40A006C5DD3 /* Build configuration list for PBXProject "TalentopolyiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD465001537C40C006C5DD3 /* Debug */,
+				DBD465011537C40C006C5DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBD465021537C40C006C5DD3 /* Build configuration list for PBXNativeTarget "TalentopolyiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD465031537C40C006C5DD3 /* Debug */,
+				DBD465041537C40C006C5DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBD465051537C40C006C5DD3 /* Build configuration list for PBXNativeTarget "TalentopolyiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBD465061537C40C006C5DD3 /* Debug */,
+				DBD465071537C40C006C5DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBD464DD1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBD464DE1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodel */,
+			);
+			currentVersion = DBD464DE1537C40B006C5DD3 /* TalentopolyiOS.xcdatamodel */;
+			path = TalentopolyiOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DBD464BC1537C40A006C5DD3 /* Project object */;
+}
