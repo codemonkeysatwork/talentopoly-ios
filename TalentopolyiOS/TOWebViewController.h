@@ -12,6 +12,10 @@
 @interface TOWebViewController : UIViewController <UIWebViewDelegate> {
     
     IBOutlet UIWebView *_webView;
+    IBOutlet UIBarButtonItem *stopBtn;
+    IBOutlet UIBarButtonItem *refreshBtn;
+    IBOutlet UIBarButtonItem *rewindBtn;
+    IBOutlet UIBarButtonItem *forwardBtn;
 }
 
 - (void)loadURL:(NSString *)url;

@@ -32,6 +32,10 @@
 - (void)dealloc
 {
     [_webView release];
+    [stopBtn release];
+    [refreshBtn release];
+    [rewindBtn release];
+    [forwardBtn release];
     [super dealloc];
 }
 
@@ -49,15 +53,34 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.toolbarItems = [NSArray arrayWithObjects:rewindBtn,forwardBtn,refreshBtn, stopBtn, nil];
 }
 
 - (void)viewDidUnload
 {
     [_webView release];
     _webView = nil;
+    [stopBtn release];
+    stopBtn = nil;
+    [refreshBtn release];
+    refreshBtn = nil;
+    [rewindBtn release];
+    rewindBtn = nil;
+    [forwardBtn release];
+    forwardBtn = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:NO animated:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES animated:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
