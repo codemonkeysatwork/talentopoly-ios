@@ -8,6 +8,7 @@
 
 #import "TOPostDetailViewController.h"
 #import "TOPost.h"
+#import "TOWebViewController.h"
 
 @implementation TOPostDetailViewController
 
@@ -145,14 +146,12 @@ const NSInteger sections[] = {2, 1, 3};
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        TOWebViewController *wc = [[TOWebViewController alloc] initWithNibName:@"TOWebViewController" bundle:nil];
+        [self.navigationController pushViewController:wc animated:YES];
+        [wc loadURL:_post.link];
+        [wc release];
+    }
 }
 
 @end
