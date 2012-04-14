@@ -12,7 +12,6 @@
 #import "TONewPostViewController.h"
 #import "TOLoginViewController.h"
 #import "TOService.h"
-#import "NSDate+RFC3339.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -48,7 +47,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (![[TOService defaultService] isValid]) {
+
+    TOService *service = [TOService defaultService];
+    if ([service isValid]) {
+        [service synchronize];
+    } else {
         [self login];
     }
 }
@@ -154,56 +157,7 @@
 - (void)reloadPosts
 {
     TOService *service = [TOService defaultService];
-    NSError *error = nil;
-
-    NSArray *posts = [service getAllPosts];
-    if (posts == nil) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Could not refresh Posts"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Dismiss"
-                                              otherButtonTitles:nil];
-        [alert show];
-        [alert release];
-        return;
-    }
-    NSSet *postIDs = [NSSet setWithArray:[posts valueForKey:@"id"]];
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity:[NSEntityDescription entityForName:@"Post" inManagedObjectContext:self.managedObjectContext]];
-
-    NSArray *knownPosts = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    NSSet *knownIDs = [NSSet setWithArray:[knownPosts valueForKey:@"post_id"]];
-    
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT (post_id IN %@)", postIDs]];
-    NSArray *removePosts = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    for (TOPost *o in removePosts) {
-        [self.managedObjectContext deleteObject:o];
-    }
-    [fetchRequest release];
-
-    for (NSDictionary *postIter in posts) {
-        TOPost *cdPost;
-        NSNumber *postID = [postIter objectForKey:@"id"];
-        if (![knownIDs containsObject:postID]) {
-            cdPost = [NSEntityDescription insertNewObjectForEntityForName:@"Post"
-                                                   inManagedObjectContext:self.managedObjectContext];
-            cdPost.post_id = postID;
-            cdPost.posted_at = [NSDate dateFromRFC3339Date:[postIter objectForKey:@"posted_at"]];
-        } else {
-            NSUInteger idx = [knownPosts indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
-                return [[obj valueForKey:@"post_id"] isEqual:postID];
-            }];
-            cdPost = [knownPosts objectAtIndex:idx];
-        }
-        
-        cdPost.title = [postIter objectForKey:@"title"];
-        cdPost.link = [postIter objectForKey:@"link"];
-        cdPost.post_description = [postIter objectForKey:@"description"];
-        cdPost.total_comments = [postIter objectForKey:@"total_comments"];
-        cdPost.total_likes = [postIter objectForKey:@"total_likes"];
-        cdPost.total_views = [postIter objectForKey:@"total_views"];
-    }
+    [service synchronize];
 }
 
 - (void)openNewPost

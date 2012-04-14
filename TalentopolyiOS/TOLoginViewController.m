@@ -82,6 +82,8 @@
     NSString *apiKey = [service loginWithEmail:_email.text andPassword:_password.text];
     if (apiKey) {
         service.apiKey = apiKey;
+        [service synchronize];
+
         NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
         [def setValue:apiKey forKey:@"apiKey"];
         [def synchronize];

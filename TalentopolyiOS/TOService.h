@@ -26,4 +26,6 @@
 - (NSArray *)getAllPosts;
 - (NSArray *)getPopularPosts;
 
+- (void)synchronize;
+
 @end

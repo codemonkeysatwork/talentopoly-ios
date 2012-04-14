@@ -17,7 +17,7 @@
     [super setUp];
     
     // Set-up code here.
-    service = [TOService defaultService];
+    service = [[TOService alloc] init];
     service.endPoint = @"http://talentopoly-staging.heroku.com/";
 }
 
@@ -54,12 +54,13 @@ static NSString *testApiKey = @"oF12VIeY6LYl3RHEF13mA_wZHoxn5BSPJ-BG9xYv-eM";
 
 - (void)testRefreshingPosts {
     service.apiKey = testApiKey;
-    TalentopolyiOSAppDelegate *app = (TalentopolyiOSAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    RootViewController *rootViewController = (RootViewController *)[app.navigationController topViewController];
 
-    [rootViewController performSelector:@selector(reloadPosts)];
-    NSInteger count = [[app.managedObjectContext insertedObjects] count];
+    TalentopolyiOSAppDelegate *app = (TalentopolyiOSAppDelegate *)[[UIApplication sharedApplication] delegate];
+    RootViewController *rootViewController = (RootViewController *)[app.navigationController topViewController];
+    service.managedObjectContext = rootViewController.managedObjectContext;
+
+    [service synchronize];
+    NSInteger count = [[service.managedObjectContext insertedObjects] count];
     STAssertTrue(count > 0, @"No Posts Feteched");
 }
 
