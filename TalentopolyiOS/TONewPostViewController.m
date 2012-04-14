@@ -15,16 +15,32 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardShow:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillHide:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardDidHide:)
+                                                     name:UIKeyboardDidHideNotification
+                                                   object:nil];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
     [postURL release];
     [postTitle release];
     [postDescription release];
+    [scroller release];
+    [scrollerContent release];
+    [postDescriptionTitle release];
     [super dealloc];
 }
 
@@ -42,6 +58,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    scroller.contentSize = scrollerContent.bounds.size;
 }
 
 - (void)viewDidUnload
@@ -52,6 +69,12 @@
     postTitle = nil;
     [postDescription release];
     postDescription = nil;
+    [scroller release];
+    scroller = nil;
+    [scrollerContent release];
+    scrollerContent = nil;
+    [postDescriptionTitle release];
+    postDescriptionTitle = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -78,6 +101,36 @@
     return NO;
 }
 
+#pragma mark - TextView Delegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [scroller setContentOffset:CGPointMake(0, postDescriptionTitle.frame.origin.y) animated:YES];
+}
+
+#pragma mark - Keyboard notifications
+
+- (void)keyboardShow:(NSNotification *)notification
+{
+    NSDictionary *info = [notification userInfo];
+    
+    CGRect kbRectSrc = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+
+    CGSize size = scroller.bounds.size;
+    size.height += kbRectSrc.size.height;
+    scroller.contentSize = size;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    [scroller setContentOffset:CGPointZero animated:YES];
+}
+
+- (void)keyboardDidHide:(NSNotification *)notification
+{
+    scroller.contentSize = scroller.bounds.size;
+}
+
 #pragma mark - Actions
 
 - (IBAction)cancelNewPost:(id)sender {
@@ -86,6 +139,7 @@
 
 - (IBAction)sendNewPost:(id)sender {
     NSLog(@"Submit new post");
-    [self.parentViewController dismissModalViewControllerAnimated:YES];
+    [self.view endEditing:NO];
+//    [self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 @end

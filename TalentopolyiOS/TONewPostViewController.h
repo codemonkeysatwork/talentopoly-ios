@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TONewPostViewController : UIViewController <UITextFieldDelegate> {
+@interface TONewPostViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate> {
     
+    IBOutlet UIScrollView *scroller;
+    IBOutlet UIView *scrollerContent;
+
     IBOutlet UITextField *postURL;
     IBOutlet UITextField *postTitle;
+    IBOutlet UILabel *postDescriptionTitle;
     IBOutlet UITextView *postDescription;
 }
 - (IBAction)cancelNewPost:(id)sender;
