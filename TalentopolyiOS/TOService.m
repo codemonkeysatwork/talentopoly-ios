@@ -112,7 +112,7 @@ static TOService* defaultService;
 
 #pragma mark - Synchronization
 
-- (void)synchronize
+- (void)synchronize_real
 {
     NSError *error = nil;
     
@@ -165,6 +165,15 @@ static TOService* defaultService;
         cdPost.total_views = [postIter objectForKey:@"total_views"];
     }
     [self.managedObjectContext save:&error];
+}
+
+- (void)synchronize
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(queue, ^(void) {
+        [self synchronize_real];
+    });
 }
 
 #pragma mark - Private REST Method
