@@ -63,6 +63,23 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - TextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    switch (textField.tag) {
+        case 1:
+            [postTitle becomeFirstResponder];
+            break;
+        case 2:
+            [postDescription becomeFirstResponder];
+            break;
+    }
+    return NO;
+}
+
+#pragma mark - Actions
+
 - (IBAction)cancelNewPost:(id)sender {
     [self.parentViewController dismissModalViewControllerAnimated:YES];
 }
