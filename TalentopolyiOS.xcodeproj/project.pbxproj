@@ -38,6 +38,8 @@
 		DBF92AAC15391E59001BB8A0 /* NSDate+RFC3339.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AA715391E59001BB8A0 /* NSDate+RFC3339.m */; };
 		DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */; };
 		DBF92AB1153921B7001BB8A0 /* TOServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */; };
+		DBF92AB51539357D001BB8A0 /* TOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AB31539357C001BB8A0 /* TOLoginViewController.m */; };
+		DBF92AB61539357D001BB8A0 /* TOLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF92AB41539357C001BB8A0 /* TOLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+URLAddons.m"; path = "Addons/NSDictionary+URLAddons.m"; sourceTree = "<group>"; };
 		DBF92AAF153921B7001BB8A0 /* TOServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOServiceTests.h; sourceTree = "<group>"; };
 		DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOServiceTests.m; sourceTree = "<group>"; };
+		DBF92AB21539357C001BB8A0 /* TOLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOLoginViewController.h; sourceTree = "<group>"; };
+		DBF92AB31539357C001BB8A0 /* TOLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOLoginViewController.m; sourceTree = "<group>"; };
+		DBF92AB41539357C001BB8A0 /* TOLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOLoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +187,9 @@
 				DBD464E31537C40B006C5DD3 /* RootViewController.h */,
 				DBD464E41537C40B006C5DD3 /* RootViewController.m */,
 				DBD464E61537C40B006C5DD3 /* RootViewController.xib */,
+				DBF92AB21539357C001BB8A0 /* TOLoginViewController.h */,
+				DBF92AB31539357C001BB8A0 /* TOLoginViewController.m */,
+				DBF92AB41539357C001BB8A0 /* TOLoginViewController.xib */,
 				DB611EC11537D38F005D9B6E /* TOPostDetailViewController.h */,
 				DB611EC21537D38F005D9B6E /* TOPostDetailViewController.m */,
 				DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */,
@@ -327,6 +335,7 @@
 				DB611EC51537D38F005D9B6E /* TOPostDetailViewController.xib in Resources */,
 				DB611ED315388D7F005D9B6E /* TOWebViewController.xib in Resources */,
 				DBBA15E71538F245003AD906 /* TONewPostViewController.xib in Resources */,
+				DBF92AB61539357D001BB8A0 /* TOLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +384,7 @@
 				DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */,
 				DBF92AAC15391E59001BB8A0 /* NSDate+RFC3339.m in Sources */,
 				DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */,
+				DBF92AB51539357D001BB8A0 /* TOLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

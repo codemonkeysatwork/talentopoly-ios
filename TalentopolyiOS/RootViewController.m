@@ -10,11 +10,13 @@
 #import "TOPost.h"
 #import "TOPostDetailViewController.h"
 #import "TONewPostViewController.h"
+#import "TOLoginViewController.h"
 #import "TOService.h"
 #import "NSDate+RFC3339.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)login;
 @end
 
 @implementation RootViewController
@@ -46,6 +48,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if (![[TOService defaultService] isValid]) {
+        [self login];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -206,6 +211,13 @@
     TONewPostViewController *np = [[TONewPostViewController alloc] init];
     [self presentModalViewController:np animated:YES];
     [np release];
+}
+
+- (void)login
+{
+    TOLoginViewController *lc = [[TOLoginViewController alloc] init];
+    [self presentModalViewController:lc animated:YES];
+    [lc release];
 }
 
 #pragma mark - Fetched results controller

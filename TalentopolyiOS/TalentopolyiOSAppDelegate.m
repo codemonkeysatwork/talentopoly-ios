@@ -67,6 +67,7 @@
 {
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)dealloc
