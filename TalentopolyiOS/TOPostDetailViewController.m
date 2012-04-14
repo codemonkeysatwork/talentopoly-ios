@@ -99,6 +99,13 @@ const NSInteger sections[] = {2, 1, 3};
     return sections[section];
 }
 
+static NSString *sectionTitles[] = {@"Title & Description", @"Link", @"Other"};
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return sectionTitles[section];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
