@@ -164,6 +164,7 @@ static TOService* defaultService;
         cdPost.total_likes = [postIter objectForKey:@"total_likes"];
         cdPost.total_views = [postIter objectForKey:@"total_views"];
     }
+    [self.managedObjectContext save:&error];
 }
 
 #pragma mark - Private REST Method
