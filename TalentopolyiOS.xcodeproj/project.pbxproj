@@ -13,6 +13,8 @@
 		DB611EC51537D38F005D9B6E /* TOPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */; };
 		DB611ED215388D7F005D9B6E /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB611ED015388D7E005D9B6E /* TOWebViewController.m */; };
 		DB611ED315388D7F005D9B6E /* TOWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB611ED115388D7E005D9B6E /* TOWebViewController.xib */; };
+		DBBA15E61538F245003AD906 /* TONewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBA15E41538F245003AD906 /* TONewPostViewController.m */; };
+		DBBA15E71538F245003AD906 /* TONewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBA15E51538F245003AD906 /* TONewPostViewController.xib */; };
 		DBD464CA1537C40B006C5DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464C91537C40B006C5DD3 /* UIKit.framework */; };
 		DBD464CC1537C40B006C5DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CB1537C40B006C5DD3 /* Foundation.framework */; };
 		DBD464CE1537C40B006C5DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */; };
@@ -54,6 +56,9 @@
 		DB611ECF15388D7E005D9B6E /* TOWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWebViewController.h; sourceTree = "<group>"; };
 		DB611ED015388D7E005D9B6E /* TOWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
 		DB611ED115388D7E005D9B6E /* TOWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TOWebViewController.xib; sourceTree = "<group>"; };
+		DBBA15E31538F245003AD906 /* TONewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TONewPostViewController.h; sourceTree = "<group>"; };
+		DBBA15E41538F245003AD906 /* TONewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TONewPostViewController.m; sourceTree = "<group>"; };
+		DBBA15E51538F245003AD906 /* TONewPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TONewPostViewController.xib; sourceTree = "<group>"; };
 		DBD464C51537C40B006C5DD3 /* TalentopolyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentopolyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD464C91537C40B006C5DD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DBD464CB1537C40B006C5DD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,6 +164,9 @@
 				DB611EC11537D38F005D9B6E /* TOPostDetailViewController.h */,
 				DB611EC21537D38F005D9B6E /* TOPostDetailViewController.m */,
 				DB611EC31537D38F005D9B6E /* TOPostDetailViewController.xib */,
+				DBBA15E31538F245003AD906 /* TONewPostViewController.h */,
+				DBBA15E41538F245003AD906 /* TONewPostViewController.m */,
+				DBBA15E51538F245003AD906 /* TONewPostViewController.xib */,
 				DB611ECF15388D7E005D9B6E /* TOWebViewController.h */,
 				DB611ED015388D7E005D9B6E /* TOWebViewController.m */,
 				DB611ED115388D7E005D9B6E /* TOWebViewController.xib */,
@@ -273,6 +281,7 @@
 				DBD464E81537C40B006C5DD3 /* RootViewController.xib in Resources */,
 				DB611EC51537D38F005D9B6E /* TOPostDetailViewController.xib in Resources */,
 				DB611ED315388D7F005D9B6E /* TOWebViewController.xib in Resources */,
+				DBBA15E71538F245003AD906 /* TONewPostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +325,7 @@
 				DB611EBA1537CF88005D9B6E /* TOPost.m in Sources */,
 				DB611EC41537D38F005D9B6E /* TOPostDetailViewController.m in Sources */,
 				DB611ED215388D7F005D9B6E /* TOWebViewController.m in Sources */,
+				DBBA15E61538F245003AD906 /* TONewPostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

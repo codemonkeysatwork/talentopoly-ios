@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "TOPost.h"
 #import "TOPostDetailViewController.h"
+#import "TONewPostViewController.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -26,7 +27,7 @@
     
     self.navigationItem.title = @"Popular Posts";
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewPost)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
 }
@@ -136,6 +137,13 @@
 {
     TOPost *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = managedObject.title;
+}
+
+- (void)openNewPost
+{
+    TONewPostViewController *np = [[TONewPostViewController alloc] init];
+    [self presentModalViewController:np animated:YES];
+    [np release];
 }
 
 - (void)insertNewObject
