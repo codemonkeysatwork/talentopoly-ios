@@ -33,7 +33,10 @@
 		DBD464FA1537C40B006C5DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD464F81537C40B006C5DD3 /* InfoPlist.strings */; };
 		DBD464FD1537C40B006C5DD3 /* TalentopolyiOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */; };
 		DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */; };
+		DBF92A46153913CC001BB8A0 /* TOService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92A45153913CC001BB8A0 /* TOService.m */; };
 		DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92A701539199B001BB8A0 /* JSONKit.m */; };
+		DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */; };
+		DBF92AB1153921B7001BB8A0 /* TOServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,10 +85,16 @@
 		DBD464FB1537C40B006C5DD3 /* TalentopolyiOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalentopolyiOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalentopolyiOSTests.h; sourceTree = "<group>"; };
 		DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalentopolyiOSTests.m; sourceTree = "<group>"; };
+		DBF92A44153913CC001BB8A0 /* TOService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOService.h; sourceTree = "<group>"; };
+		DBF92A45153913CC001BB8A0 /* TOService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOService.m; sourceTree = "<group>"; };
 		DBF92A6E1539199B001BB8A0 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
 		DBF92A6F1539199B001BB8A0 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		DBF92A701539199B001BB8A0 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		DBF92A711539199B001BB8A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DBF92AA815391E59001BB8A0 /* NSDictionary+URLAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+URLAddons.h"; path = "Addons/NSDictionary+URLAddons.h"; sourceTree = "<group>"; };
+		DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+URLAddons.m"; path = "Addons/NSDictionary+URLAddons.m"; sourceTree = "<group>"; };
+		DBF92AAF153921B7001BB8A0 /* TOServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOServiceTests.h; sourceTree = "<group>"; };
+		DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOServiceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +157,7 @@
 		DBD464C81537C40B006C5DD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBF92AA415391E4A001BB8A0 /* Addons */,
 				DBF92A481539199A001BB8A0 /* JSONKit */,
 				DBD464C91537C40B006C5DD3 /* UIKit.framework */,
 				DBD464CB1537C40B006C5DD3 /* Foundation.framework */,
@@ -161,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				DB611EB41537CF88005D9B6E /* Models */,
+				DBF92A44153913CC001BB8A0 /* TOService.h */,
+				DBF92A45153913CC001BB8A0 /* TOService.m */,
 				DBD464DA1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.h */,
 				DBD464DB1537C40B006C5DD3 /* TalentopolyiOSAppDelegate.m */,
 				DBD464E01537C40B006C5DD3 /* MainWindow.xib */,
@@ -197,6 +209,8 @@
 			children = (
 				DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */,
 				DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */,
+				DBF92AAF153921B7001BB8A0 /* TOServiceTests.h */,
+				DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */,
 				DBD464F61537C40B006C5DD3 /* Supporting Files */,
 			);
 			path = TalentopolyiOSTests;
@@ -221,6 +235,15 @@
 				DBF92A711539199B001BB8A0 /* README.md */,
 			);
 			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		DBF92AA415391E4A001BB8A0 /* Addons */ = {
+			isa = PBXGroup;
+			children = (
+				DBF92AA815391E59001BB8A0 /* NSDictionary+URLAddons.h */,
+				DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */,
+			);
+			name = Addons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +366,9 @@
 				DB611EC41537D38F005D9B6E /* TOPostDetailViewController.m in Sources */,
 				DB611ED215388D7F005D9B6E /* TOWebViewController.m in Sources */,
 				DBBA15E61538F245003AD906 /* TONewPostViewController.m in Sources */,
+				DBF92A46153913CC001BB8A0 /* TOService.m in Sources */,
 				DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */,
+				DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */,
+				DBF92AB1153921B7001BB8A0 /* TOServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
