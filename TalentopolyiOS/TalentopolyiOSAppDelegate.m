@@ -9,6 +9,7 @@
 #import "TalentopolyiOSAppDelegate.h"
 
 #import "RootViewController.h"
+#import "TOService.h"
 
 @implementation TalentopolyiOSAppDelegate
 
@@ -82,6 +83,12 @@
 {
     RootViewController *rootViewController = (RootViewController *)[self.navigationController topViewController];
     rootViewController.managedObjectContext = self.managedObjectContext;
+    TOService *service = [TOService defaultService];
+    service.managedObjectContext = self.managedObjectContext;
+
+    NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
+    service.endPoint = @"http://talentopoly-staging.heroku.com/";
+    [service validateAndSetApiKey:[def stringForKey:@"apiKey"]];
 }
 
 - (void)saveContext

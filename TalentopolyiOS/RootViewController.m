@@ -10,6 +10,8 @@
 #import "TOPost.h"
 #import "TOPostDetailViewController.h"
 #import "TONewPostViewController.h"
+#import "TOService.h"
+#import "NSDate+RFC3339.h"
 
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -25,8 +27,12 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Popular Posts";
+    self.navigationItem.title = @"Posts";
 
+    UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadPosts)];
+    self.navigationItem.leftBarButtonItem = reloadButton;
+    [reloadButton release];
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(openNewPost)];
     self.navigationItem.rightBarButtonItem = addButton;
     [addButton release];
@@ -139,37 +145,67 @@
     cell.textLabel.text = managedObject.title;
 }
 
+#pragma mark - actions
+- (void)reloadPosts
+{
+    TOService *service = [TOService defaultService];
+    NSError *error = nil;
+
+    NSArray *posts = [service getAllPosts];
+    if (posts == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Could not refresh Posts"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+        return;
+    }
+    NSSet *postIDs = [NSSet setWithArray:[posts valueForKey:@"id"]];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:[NSEntityDescription entityForName:@"Post" inManagedObjectContext:self.managedObjectContext]];
+
+    NSArray *knownPosts = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSSet *knownIDs = [NSSet setWithArray:[knownPosts valueForKey:@"post_id"]];
+    
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"NOT (post_id IN %@)", postIDs]];
+    NSArray *removePosts = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    for (TOPost *o in removePosts) {
+        [self.managedObjectContext deleteObject:o];
+    }
+    [fetchRequest release];
+
+    for (NSDictionary *postIter in posts) {
+        TOPost *cdPost;
+        NSNumber *postID = [postIter objectForKey:@"id"];
+        if (![knownIDs containsObject:postID]) {
+            cdPost = [NSEntityDescription insertNewObjectForEntityForName:@"Post"
+                                                   inManagedObjectContext:self.managedObjectContext];
+            cdPost.post_id = postID;
+            cdPost.posted_at = [NSDate dateFromRFC3339Date:[postIter objectForKey:@"posted_at"]];
+        } else {
+            NSUInteger idx = [knownPosts indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+                return [[obj valueForKey:@"post_id"] isEqual:postID];
+            }];
+            cdPost = [knownPosts objectAtIndex:idx];
+        }
+        
+        cdPost.title = [postIter objectForKey:@"title"];
+        cdPost.link = [postIter objectForKey:@"link"];
+        cdPost.post_description = [postIter objectForKey:@"description"];
+        cdPost.total_comments = [postIter objectForKey:@"total_comments"];
+        cdPost.total_likes = [postIter objectForKey:@"total_likes"];
+        cdPost.total_views = [postIter objectForKey:@"total_views"];
+    }
+}
+
 - (void)openNewPost
 {
     TONewPostViewController *np = [[TONewPostViewController alloc] init];
     [self presentModalViewController:np animated:YES];
     [np release];
-}
-
-- (void)insertNewObject
-{
-    // Create a new instance of the entity managed by the fetched results controller.
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    TOPost *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    newManagedObject.posted_at = [NSDate date];
-    newManagedObject.title = [NSString stringWithFormat:@"Title posted at %@", [newManagedObject.posted_at description]];
-    newManagedObject.link = @"http://www.talentopoly.com/";
-    newManagedObject.post_idValue = 123;
-
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error])
-    {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
 }
 
 #pragma mark - Fetched results controller

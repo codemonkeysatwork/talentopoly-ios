@@ -145,7 +145,7 @@ static TOService* defaultService;
 
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if (error) {
-        NSLog(@"Error: %@", [error localizedDescription]);
+        NSLog(@"REST Error: %@", [error localizedDescription]);
         if (error.code != NSURLErrorUserCancelledAuthentication) {
             return nil;
         }

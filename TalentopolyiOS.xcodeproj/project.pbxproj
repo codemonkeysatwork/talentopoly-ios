@@ -35,6 +35,7 @@
 		DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */; };
 		DBF92A46153913CC001BB8A0 /* TOService.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92A45153913CC001BB8A0 /* TOService.m */; };
 		DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92A701539199B001BB8A0 /* JSONKit.m */; };
+		DBF92AAC15391E59001BB8A0 /* NSDate+RFC3339.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AA715391E59001BB8A0 /* NSDate+RFC3339.m */; };
 		DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */; };
 		DBF92AB1153921B7001BB8A0 /* TOServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92AB0153921B7001BB8A0 /* TOServiceTests.m */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,8 @@
 		DBF92A6F1539199B001BB8A0 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		DBF92A701539199B001BB8A0 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		DBF92A711539199B001BB8A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DBF92AA615391E59001BB8A0 /* NSDate+RFC3339.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+RFC3339.h"; path = "Addons/NSDate+RFC3339.h"; sourceTree = "<group>"; };
+		DBF92AA715391E59001BB8A0 /* NSDate+RFC3339.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+RFC3339.m"; path = "Addons/NSDate+RFC3339.m"; sourceTree = "<group>"; };
 		DBF92AA815391E59001BB8A0 /* NSDictionary+URLAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+URLAddons.h"; path = "Addons/NSDictionary+URLAddons.h"; sourceTree = "<group>"; };
 		DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+URLAddons.m"; path = "Addons/NSDictionary+URLAddons.m"; sourceTree = "<group>"; };
 		DBF92AAF153921B7001BB8A0 /* TOServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOServiceTests.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 		DBF92AA415391E4A001BB8A0 /* Addons */ = {
 			isa = PBXGroup;
 			children = (
+				DBF92AA615391E59001BB8A0 /* NSDate+RFC3339.h */,
+				DBF92AA715391E59001BB8A0 /* NSDate+RFC3339.m */,
 				DBF92AA815391E59001BB8A0 /* NSDictionary+URLAddons.h */,
 				DBF92AA915391E59001BB8A0 /* NSDictionary+URLAddons.m */,
 			);
@@ -368,6 +373,7 @@
 				DBBA15E61538F245003AD906 /* TONewPostViewController.m in Sources */,
 				DBF92A46153913CC001BB8A0 /* TOService.m in Sources */,
 				DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */,
+				DBF92AAC15391E59001BB8A0 /* NSDate+RFC3339.m in Sources */,
 				DBF92AAD15391E59001BB8A0 /* NSDictionary+URLAddons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
