@@ -33,6 +33,7 @@
 		DBD464FA1537C40B006C5DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD464F81537C40B006C5DD3 /* InfoPlist.strings */; };
 		DBD464FD1537C40B006C5DD3 /* TalentopolyiOSTests.h in Resources */ = {isa = PBXBuildFile; fileRef = DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */; };
 		DBD464FF1537C40C006C5DD3 /* TalentopolyiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */; };
+		DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF92A701539199B001BB8A0 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,10 @@
 		DBD464FB1537C40B006C5DD3 /* TalentopolyiOSTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalentopolyiOSTests-Prefix.pch"; sourceTree = "<group>"; };
 		DBD464FC1537C40B006C5DD3 /* TalentopolyiOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalentopolyiOSTests.h; sourceTree = "<group>"; };
 		DBD464FE1537C40C006C5DD3 /* TalentopolyiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalentopolyiOSTests.m; sourceTree = "<group>"; };
+		DBF92A6E1539199B001BB8A0 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		DBF92A6F1539199B001BB8A0 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		DBF92A701539199B001BB8A0 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		DBF92A711539199B001BB8A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,7 @@
 		DBD464C81537C40B006C5DD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBF92A481539199A001BB8A0 /* JSONKit */,
 				DBD464C91537C40B006C5DD3 /* UIKit.framework */,
 				DBD464CB1537C40B006C5DD3 /* Foundation.framework */,
 				DBD464CD1537C40B006C5DD3 /* CoreGraphics.framework */,
@@ -204,6 +210,17 @@
 				DBD464FB1537C40B006C5DD3 /* TalentopolyiOSTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBF92A481539199A001BB8A0 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				DBF92A6E1539199B001BB8A0 /* CHANGELOG.md */,
+				DBF92A6F1539199B001BB8A0 /* JSONKit.h */,
+				DBF92A701539199B001BB8A0 /* JSONKit.m */,
+				DBF92A711539199B001BB8A0 /* README.md */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +343,7 @@
 				DB611EC41537D38F005D9B6E /* TOPostDetailViewController.m in Sources */,
 				DB611ED215388D7F005D9B6E /* TOWebViewController.m in Sources */,
 				DBBA15E61538F245003AD906 /* TONewPostViewController.m in Sources */,
+				DBF92A891539199B001BB8A0 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
